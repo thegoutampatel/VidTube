@@ -4,11 +4,12 @@ import cors from "cors";
 
 const app = express();
 
+//This is middleware
 app.use(
   cors({
     origin: process.env.CORS_ORIGIN,
     credentials: true,
-  })
+  }),
 );
 
 // Common Middlewares

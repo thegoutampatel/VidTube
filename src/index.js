@@ -4,6 +4,7 @@ import connectDB from "./db/index.js";
 
 const PORT = process.env.PORT || 3000;
 
+//this is for connection with DB.
 connectDB()
   .then(() => {
     app.listen(PORT, () => {
@@ -11,5 +12,5 @@ connectDB()
     });
   })
   .catch((e) => {
-    console.log("MongoDB Connection Error");
+    console.log(`MongoDB Connection Error ${e}`);
   });
